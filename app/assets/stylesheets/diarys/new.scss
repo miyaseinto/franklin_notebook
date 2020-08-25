@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+.Notebook{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  &__content{
+    background-color: white;
+    width: 90vw;
+    height: 90vh;
+    margin: 15vh 5vw 5vh 5vw;
+    position: relative;
+    &__text{
+      font-family: 'Amatic SC', cursive;
+      text-align: center;
+      font-size: 30px;
+      border-bottom:double ;
+      border-color: #FF0000;
+      border-width: 3px;
+    }
+    &__priority{
+      float: left;
+      border-right:1px solid #FF0000;
+      width: 20vw;
+      text-align: center;
+      padding: 20px 0;
+      display: inline;
+      &--text{
+        font-size: 30px;
+        font-family: 'Amatic SC', cursive;
+      }
+      &--number{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .number_field{
+        margin: 14px;
+        display: block;
+      }
+    }
+    &__taskbox{
+      float: left;
+      width: 30vw;
+      text-align: center;
+      padding: 20px 0;
+      &--text{
+        font-family: 'Amatic SC', cursive;
+        font-size: 30px;
+        text-align: center;
+      }
+      &--field{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text_field{
+        margin: 14px;
+        display: block;
+      }
+    }
+    &__diary{
+      text-align: center;
+      padding: 20px 0;
+      float: left;
+      width: 40vw;
+      &--text{
+        font-family: 'Amatic SC', cursive;
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+    .diary-text{
+      margin: 14px;
+    }
+    &__date{
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      right: 20px;
+      &__submit{
+        padding-left: 20px;
+      }
+    }
+    .date{
+      display: flex;
+    }
+    .submit{
+      width: 100px;
+      background-color:#9966FF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: large;
+    }
+  }
+}

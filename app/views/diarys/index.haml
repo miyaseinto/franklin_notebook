@@ -1,0 +1,42 @@
+= render "header"
+.Main
+  .Main__image
+    .Main__image--text hoge's diary
+.Content
+  .Content__box
+    .Content__box__target 目標
+    .Content__box__target--text 目標を作成してください！
+    -# - if @target.present?
+    -#   = @target.target
+    -# - else
+    -#   %span.text 目標を作成してください！
+    = link_to(("#"),class:'Content__box__target--link') do
+      .Content__box__target--btn 目標作成
+  .Content__block
+    .Content__block__diary D i a r y
+    %ul.Content__block__diary--list
+      %li.list 
+      =link_to("#") do 
+        20〇〇年〇月〇〇日
+      %li.list 
+      =link_to("#") do 
+        20〇〇年〇月〇〇日
+      %li.list 
+      =link_to("#") do 
+        20〇〇年〇月〇〇日
+      %li.list 
+      =link_to("#") do 
+        20〇〇年〇月〇〇日
+      %li.list 
+      =link_to("#") do 
+        20〇〇年〇月〇〇日
+      %li.list 
+      =link_to("#") do 
+        20〇〇年〇月〇〇日
+.Footer
+  .Footer__text My life diary
+= link_to(new_diary_path) do
+  .Diary
+    %span.Diary__text 予定作成
+    = image_tag '/assets/diary.jpeg', size: '185×50' ,class:'Diary__image'
+
