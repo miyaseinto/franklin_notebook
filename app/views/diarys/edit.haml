@@ -1,1 +1,39 @@
 = render "header"
+.Notebook
+  .Notebook__content 
+    %p.Notebook__content__text Daily Planner
+    = form_with local: true do |f|
+      .Notebook__content__priority 
+        %p.Notebook__content__priority--text Priority
+        .Notebook__content__priority--number
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+          =f.number_field :hoge,class:"number_field", in: 1.0..10.0
+      .Notebook__content__taskbox
+        %p.Notebook__content__taskbox--text Task Box
+        .Notebook__content__taskbox--field
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+          =f.text_field :hoge,class:"text_field", placeholder:"計画立案"
+      .Notebook__content__diary
+        %p.Notebook__content__diary--text Diary
+        .Notebook__content__diary--field
+          = f.text_area :hoge, class:"diary-text", placeholder:"計画立案の結果を記入", size: "60x20"
+      .Notebook__content__date
+        =f.date_field :hoge,class:"data"
+        .Notebook__content__date__submit
+          = f.submit "変　更", class:"submit"
