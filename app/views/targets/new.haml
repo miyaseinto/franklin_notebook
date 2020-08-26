@@ -1,0 +1,10 @@
+= render "/diarys/header"
+.Target
+  .Target__content
+    %p.Target__content__text 目標作成
+    %span.Target__content__target Write your goals
+    = form_with local: true do |f|
+      .Target__content__fild
+      =f.text_area :hoge, class:"target-text", placeholder:"目標を記入", size: "80x5"
+      .Target__content__submit
+      = f.submit "登　録", class:"submit"
