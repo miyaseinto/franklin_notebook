@@ -34,6 +34,15 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
   end
 
+  def destroy
+    @diary = Diary.find(params[:id])
+    if @diary.destroy
+      redirect_to root_path
+    else
+      render 'destroy'
+    end
+  end
+
   private
 
   def diary_params

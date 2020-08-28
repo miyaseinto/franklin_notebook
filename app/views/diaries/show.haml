@@ -52,12 +52,14 @@
       .Notebook__content__diary
         %p.Notebook__content__diary--text Diary
         .Notebook__content__diary--field
-          .diary-text
-            = @diary.diary
+          .diary-date
+            = simple_format(@diary.diary) 
       .Notebook__content__date
         .date
         = @diary.date
         .Notebook__content__date__submit
           = link_to '編　集', edit_diary_path,method: :get,class:"edit-btn"
           %span or
-          = link_to '削　除', "#",class:"dalete-btn"
+          = link_to '削　除', diary_path(@diary.id),method: :delete ,class:"dalete-btn"
+          %span or
+          = link_to 'もどる', "/",class:"dalete-btn"
