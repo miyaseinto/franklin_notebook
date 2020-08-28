@@ -1,20 +1,22 @@
 = render "header"
 .Main
   .Main__image
-    .Main__image--text hoge's diary
-.Content
-  .Content__box
-    .Content__box__target 目標
-    .Content__box__target--text 目標を作成してください！
+    .Main__image--text 
+      = link_to current_user.nickname, "#", class: "Main__image--text--nickname"
+      %span.Main__image--text--text 's diary
+.Primary
+  .Primary__box
+    .Primary__box__target 目標
+    .Primary__box__target--text 目標を作成してください！
     -# - if @target.present?
     -#   = @target.target
     -# - else
     -#   %span.text 目標を作成してください！
-    = link_to((new_target_path),class:'Content__box__target--link') do
-      .Content__box__target--btn 目標作成
-  .Content__block
-    .Content__block__diary D i a r y
-    %ul.Content__block__diary--list
+    = link_to((new_target_path),class:'Primary__box__target--link') do
+      .Primary__box__target--btn 目標作成
+  .Primary__block
+    .Primary__block__diary D i a r y
+    %ul.Primary__block__diary--list
       %li.list 
       =link_to("#") do 
         20〇〇年〇月〇〇日

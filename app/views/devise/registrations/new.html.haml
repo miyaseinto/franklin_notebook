@@ -1,0 +1,27 @@
+.Content
+  %h2.titel Franklin Diary
+  .Content__fild
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :nickname, "Nickname"
+        %br/
+        = f.text_field :nickname, autofocus: true, class:"box"
+      .field
+        = f.label :email, "Mail"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class:"box"
+      .field
+        = f.label :password, "Password"
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class:"box"
+      .field
+        = f.label :password_confirmation, "Password_confirmation"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class:"box"
+      .actions
+        = f.submit "Register" ,class:"submit"
+    = render "devise/shared/links"
