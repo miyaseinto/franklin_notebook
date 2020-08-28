@@ -46,10 +46,15 @@
       right: 30px;
       top:100px;
       font-weight: bold;
+      &--nickname{
+        text-decoration: none;
+        color: white;
+        font-size: 40px;
+      }
     }
   }
 }
-.Content{
+.Primary{
   background-color: #f8f8f8;
   &__box{
     display: flex;

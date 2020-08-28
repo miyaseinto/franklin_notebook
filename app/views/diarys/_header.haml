@@ -2,4 +2,4 @@
   .Container
     %h2.header-left
       Franklin Diary
-    = link_to 'ログアウト',"#", class:'header-right'
+    = link_to 'ログアウト', destroy_user_session_path , method: :delete, class:'header-right'
