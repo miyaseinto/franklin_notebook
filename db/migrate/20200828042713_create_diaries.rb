@@ -22,7 +22,7 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.string :taskbox9,        null: false
       t.string :taskbox10,       null: false
       t.text :diary,             null: false
-      t.datetime :date,          null: false
+      t.date :date,          null: false
       t.timestamps
     end
   end

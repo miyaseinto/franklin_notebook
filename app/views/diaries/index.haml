@@ -18,24 +18,10 @@
   .Primary__block
     .Primary__block__diary D i a r y
     %ul.Primary__block__diary--list
-      %li.list 
-      =link_to("#") do 
-        20〇〇年〇月〇〇日
-      %li.list 
-      =link_to("#") do 
-        20〇〇年〇月〇〇日
-      %li.list 
-      =link_to("#") do 
-        20〇〇年〇月〇〇日
-      %li.list 
-      =link_to("#") do 
-        20〇〇年〇月〇〇日
-      %li.list 
-      =link_to("#") do 
-        20〇〇年〇月〇〇日
-      %li.list 
-      =link_to("#") do 
-        20〇〇年〇月〇〇日
+      - @diaries.each do |diary|
+        %li.list 
+          = link_to diary_path(diary.id),class:"diary-link" do
+            = diary.date
 .Footer
   .Footer__text My life diary
 = link_to(new_diary_path) do

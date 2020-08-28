@@ -2,25 +2,61 @@
 .Notebook
   .Notebook__content 
     %p.Notebook__content__text Daily Planner
-    = form_with local: true do |f|
+    = form_with(model: @diary, local: true )do |f|
       .Notebook__content__priority 
         %p.Notebook__content__priority--text Priority
         .Notebook__content__priority--number
           .number_field
-          -# = @diary.hoge1
+            = @diary.priority1
+          .number_field
+            = @diary.priority2
+          .number_field
+            = @diary.priority3
+          .number_field
+            = @diary.priority4
+          .number_field
+            = @diary.priority5
+          .number_field
+            = @diary.priority6
+          .number_field
+            = @diary.priority7
+          .number_field
+            = @diary.priority8
+          .number_field
+            = @diary.priority9
+          .number_field
+            = @diary.priority10
       .Notebook__content__taskbox
         %p.Notebook__content__taskbox--text Task Box
         .Notebook__content__taskbox--field
-          .text_fild
-          -# = @diary.hoge1
+          .taskbox_field
+            = @diary.taskbox1
+          .taskbox_field
+            = @diary.taskbox2
+          .taskbox_field
+            = @diary.taskbox3
+          .taskbox_field
+            = @diary.taskbox4
+          .taskbox_field
+            = @diary.taskbox5
+          .taskbox_field
+            = @diary.taskbox6
+          .taskbox_field
+            = @diary.taskbox7
+          .taskbox_field
+            = @diary.taskbox8
+          .taskbox_field
+            = @diary.taskbox9
+          .taskbox_field
+            = @diary.taskbox10
       .Notebook__content__diary
         %p.Notebook__content__diary--text Diary
         .Notebook__content__diary--field
           .diary-text
-          -# = @diary.hoge
+            = @diary.diary
       .Notebook__content__date
         .date
-        -# = @daiary.hoge
+        = @diary.date
         .Notebook__content__date__submit
           = link_to '編　集', edit_diary_path,method: :get,class:"edit-btn"
           %span or
