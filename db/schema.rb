@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_26_020557) do
+ActiveRecord::Schema.define(version: 2020_08_28_042811) do
+
+  create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "priority1", null: false
+    t.integer "priority2", null: false
+    t.integer "priority3", null: false
+    t.integer "priority4", null: false
+    t.integer "priority5", null: false
+    t.integer "priority6", null: false
+    t.integer "priority7", null: false
+    t.integer "priority8", null: false
+    t.integer "priority9", null: false
+    t.integer "priority10", null: false
+    t.string "taskbox1", null: false
+    t.string "taskbox2", null: false
+    t.string "taskbox3", null: false
+    t.string "taskbox4", null: false
+    t.string "taskbox5", null: false
+    t.string "taskbox6", null: false
+    t.string "taskbox7", null: false
+    t.string "taskbox8", null: false
+    t.string "taskbox9", null: false
+    t.string "taskbox10", null: false
+    t.text "diary", null: false
+    t.datetime "date", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nickname", null: false
+    t.string "nickname", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
