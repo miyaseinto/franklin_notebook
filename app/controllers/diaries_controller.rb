@@ -3,6 +3,7 @@ class DiariesController < ApplicationController
 
   def index
     @diaries = Diary.all.order('date DESC')
+    @target = Target.all
   end
 
   def new

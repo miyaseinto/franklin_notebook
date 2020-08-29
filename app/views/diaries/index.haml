@@ -7,11 +7,11 @@
 .Primary
   .Primary__box
     .Primary__box__target 目標
-    .Primary__box__target--text 目標を作成してください！
-    -# - if @target.present?
-    -#   = @target.target
-    -# - else
-    -#   %span.text 目標を作成してください！
+    .Primary__box__target--text 
+      - if @target.present?
+        = render 'targets/index'
+      - else
+        %span.text 目標を作成してください！
     = link_to((new_target_path),class:'Primary__box__target--link') do
       .Primary__box__target--btn 目標作成
   #page
