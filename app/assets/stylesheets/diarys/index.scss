@@ -65,9 +65,20 @@
       &--text{
         font-size: 20px;
         margin: 0 10px;
-        padding: 30px 30px;
+        padding: 0 30px;
+        .text{
+         font-size: 50px;
+        }
+        .target{
+          padding: 5px;
+          border: 1px solid black;
+        }
       }
       &--link{
+        text-decoration: none;
+      }
+      .diary-list{
+        font-size: 20px;
         text-decoration: none;
       }
       &--btn{
