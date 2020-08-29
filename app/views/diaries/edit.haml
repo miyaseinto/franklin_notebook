@@ -6,16 +6,36 @@
       .Notebook__content__priority 
         %p.Notebook__content__priority--text Priority
         .Notebook__content__priority--number
-          =f.number_field :priority1,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority2,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority3,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority4,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority5,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority6,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority7,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority8,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority9,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority10,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox1,class:"checkbox"
+            =f.number_field :priority1,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox2,class:"checkbox"
+            =f.number_field :priority2,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox3,class:"checkbox"
+            =f.number_field :priority3,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox4,class:"checkbox"
+            =f.number_field :priority4,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox5,class:"checkbox"
+            =f.number_field :priority5,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox6,class:"checkbox"
+            =f.number_field :priority6,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox7,class:"checkbox"
+            =f.number_field :priority7,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox8,class:"checkbox"
+            =f.number_field :priority8,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox9,class:"checkbox"
+            =f.number_field :priority9,class:"number_field", in: 1.0..10.0
+          .Notebook__content__priority--number-box
+            =f.check_box :checkbox10,class:"checkbox"
+            =f.number_field :priority10,class:"number_field", in: 1.0..10.0
       .Notebook__content__taskbox
         %p.Notebook__content__taskbox--text Task Box
         .Notebook__content__taskbox--field
@@ -34,6 +54,7 @@
         .Notebook__content__diary--field
           = f.text_area :diary, class:"diary-text", placeholder:"計画立案の結果を記入", size: "60x20"
       .Notebook__content__date
+        .field
         =f.date_field :date,class:"data"
         .Notebook__content__date__submit
           = f.submit "変　更", class:"submit"

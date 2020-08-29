@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 2020_08_28_042811) do
     t.string "taskbox10", null: false
     t.text "diary", null: false
     t.date "date", null: false
+    t.integer "checkbox1"
+    t.integer "checkbox2"
+    t.integer "checkbox3"
+    t.integer "checkbox4"
+    t.integer "checkbox5"
+    t.integer "checkbox6"
+    t.integer "checkbox7"
+    t.integer "checkbox8"
+    t.integer "checkbox9"
+    t.integer "checkbox10"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
