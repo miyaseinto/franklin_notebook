@@ -1,6 +1,6 @@
 .Primary__box__target--text
-  .target
-    - @target.each do |target|
+  - @target.each do |target|
+    .target
       = target.target
       = link_to "編集",edit_target_path(target),method: :get,class:'btn'
       %br
