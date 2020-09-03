@@ -5,6 +5,6 @@
     %span.Target__content__target Write your goals
     = form_with(model: @target, local: true )do |f|
       .Target__content__fild
-      =f.text_area :target, class:"target-text", placeholder:"目標を記入", size: "80x5"
+      =f.text_area :target, class:"target-text", placeholder:"目標を記入"
       .Target__content__submit
       = f.submit "登　録", class:"submit"

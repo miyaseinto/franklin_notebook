@@ -3,19 +3,6 @@
   .Notebook__content 
     %p.Notebook__content__text Daily Planner
     = form_with(model: @diary, local: true )do |f|
-      .Notebook__content__priority 
-        %p.Notebook__content__priority--text Priority
-        .Notebook__content__priority--number
-          =f.number_field :priority1,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority2,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority3,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority4,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority5,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority6,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority7,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority8,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority9,class:"number_field", in: 1.0..10.0
-          =f.number_field :priority10,class:"number_field", in: 1.0..10.0
       .Notebook__content__taskbox
         %p.Notebook__content__taskbox--text Task Box
         .Notebook__content__taskbox--field

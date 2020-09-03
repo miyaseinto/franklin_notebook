@@ -105,3 +105,10 @@
     }
   }
 }
+
+@media(max-width: 670px){
+  .number_field{
+    width: 2px;
+    background-color: red;
+  }
+}

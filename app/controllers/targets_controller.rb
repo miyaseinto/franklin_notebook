@@ -40,7 +40,7 @@ class TargetsController < ApplicationController
   private
 
   def target_params
-    params.require(:target).permit(:target)
+    params.require(:target).permit(:target).merge(user_id: current_user.id)
   end
 
   def set_target

@@ -44,11 +44,7 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:priority1, :priority2, :priority3, :priority4, :priority5, :priority6, :priority7, :priority8, :priority9, :priority10, :taskbox1, :taskbox2, :taskbox3, :taskbox4, :taskbox5, :taskbox6, :taskbox7, :taskbox8, :taskbox9, :taskbox10, :diary, :date)
-  end
-
-  def checkbox_params
-    params.require(:diary).permit(:checkbox1, :checkbox2, :checkbox3, :checkbox4, :checkbox5, :checkbox6, :checkbox7, :checkbox8, :checkbox9, :checkbox10)
+    params.require(:diary).permit(:priority1, :priority2, :priority3, :priority4, :priority5, :priority6, :priority7, :priority8, :priority9, :priority10, :taskbox1, :taskbox2, :taskbox3, :taskbox4, :taskbox5, :taskbox6, :taskbox7, :taskbox8, :taskbox9, :taskbox10, :diary, :date).merge(user_id: current_user.id)
   end
 
 

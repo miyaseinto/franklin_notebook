@@ -7,7 +7,7 @@
         %p.fild__text 
         = f.label :email ,"Mail"
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class:"box"
       .actions
-        = f.submit "Send me reset password instructions",class:"submit"
+        = f.submit "Reset password",class:"submit"
     = render "devise/shared/links"
