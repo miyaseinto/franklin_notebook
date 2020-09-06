@@ -10,36 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_114138) do
-
-  create_table "assessments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "checkbox1"
-    t.integer "checkbox2"
-    t.integer "checkbox3"
-    t.integer "checkbox4"
-    t.integer "checkbox5"
-    t.integer "checkbox6"
-    t.integer "checkbox7"
-    t.integer "checkbox8"
-    t.integer "checkbox9"
-    t.integer "checkbox10"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2020_08_28_042811) do
 
   create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "taskbox1"
-    t.string "taskbox2"
-    t.string "taskbox3"
-    t.string "taskbox4"
-    t.string "taskbox5"
-    t.string "taskbox6"
-    t.string "taskbox7"
-    t.string "taskbox8"
-    t.string "taskbox9"
-    t.string "taskbox10"
-    t.text "diary"
-    t.date "date"
+    t.string "taskbox1", null: false
+    t.string "taskbox2", null: false
+    t.string "taskbox3", null: false
+    t.string "taskbox4", null: false
+    t.string "taskbox5", null: false
+    t.string "taskbox6", null: false
+    t.string "taskbox7", null: false
+    t.string "taskbox8", null: false
+    t.string "taskbox9", null: false
+    t.string "taskbox10", null: false
+    t.text "diary", null: false
+    t.date "date", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

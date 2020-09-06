@@ -34,8 +34,6 @@
       .date
       = @diary.date
       .Notebook__content__date__submit
-        = link_to '評　価', new_diary_assessment_path(@diary),method: :get,class:"edit-btn"
-        %span or
         = link_to '編　集', edit_diary_path,method: :get,class:"edit-btn"
         %span or
         = link_to '削　除', diary_path(@diary.id),method: :delete ,class:"dalete-btn"
