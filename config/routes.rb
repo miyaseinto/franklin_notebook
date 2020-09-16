@@ -6,9 +6,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   } 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  
-  resources :diaries do
-    resources :assessments, only: [:new, :create]
-  end
+
+  resources :diaries
   resources :targets, only: [:index, :new, :create, :edit, :update, :destroy]
 end

@@ -2,7 +2,7 @@ class TargetsController < ApplicationController
   before_action :set_target, only: [:edit, :update, :destroy]
 
   def index
-    @target = Target.all
+    @target = Target.where(user_id: current_user.id)
   end
 
   def new

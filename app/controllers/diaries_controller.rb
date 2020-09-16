@@ -2,8 +2,8 @@ class DiariesController < ApplicationController
   before_action :set_diary, only: [:edit, :show, :update, :destroy]
 
   def index
-    @diaries = Diary.all.order('date DESC')
-    @target = Target.all
+    @diaries = Diary.where(user_id: current_user.id).all.order('date DESC')
+    @target = Target.where(user_id: current_user.id)
   end
 
   def new
@@ -44,7 +44,7 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:priority1, :priority2, :priority3, :priority4, :priority5, :priority6, :priority7, :priority8, :priority9, :priority10, :taskbox1, :taskbox2, :taskbox3, :taskbox4, :taskbox5, :taskbox6, :taskbox7, :taskbox8, :taskbox9, :taskbox10, :diary, :date).merge(user_id: current_user.id)
+    params.require(:diary).permit(:taskbox1, :taskbox2, :taskbox3, :taskbox4, :taskbox5, :taskbox6, :taskbox7, :taskbox8, :taskbox9, :taskbox10, :diary, :date).merge(user_id: current_user.id)
   end
 
 
