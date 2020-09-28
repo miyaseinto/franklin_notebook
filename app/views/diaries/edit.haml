@@ -3,6 +3,7 @@
   .Notebook__content 
     %p.Notebook__content__text Daily Planner
     = form_with(model: @diary, local: true ) do |f|
+      = render 'layouts/error_messages',model: f.object
       .Notebook__content__taskbox
         %p.Notebook__content__taskbox--text Task Box
         .Notebook__content__taskbox--field

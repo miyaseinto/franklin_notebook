@@ -1,0 +1,4 @@
+- if model.errors.any?
+  .error-alert
+    - model.errors.full_messages.each do |message|
+      %span.error-message= message

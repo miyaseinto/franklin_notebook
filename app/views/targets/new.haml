@@ -4,6 +4,7 @@
     %p.Target__content__text 目標作成
     %span.Target__content__target Write your goals
     = form_with(model: @target, local: true )do |f|
+      = render 'layouts/error_messages',model: f.object
       .Target__content__fild
       =f.text_area :target, class:"target-text", placeholder:"目標を記入"
       .Target__content__submit
