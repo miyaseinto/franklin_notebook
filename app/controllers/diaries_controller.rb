@@ -44,7 +44,7 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:taskbox1, :taskbox2, :taskbox3, :taskbox4, :taskbox5, :taskbox6, :taskbox7, :taskbox8, :taskbox9, :taskbox10, :diary, :date).merge(user_id: current_user.id)
+    params.require(:diary).permit(:taskbox1, :taskbox2, :taskbox3, :taskbox4, :taskbox5, :taskbox6, :taskbox7, :taskbox8, :taskbox9, :taskbox10, :plan, :lookingback,:diary, :date).merge(user_id: current_user.id)
   end
 
 

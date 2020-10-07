@@ -2,40 +2,49 @@
 .Notebook
   .Notebook__content 
     %p.Notebook__content__text Daily Planner
-    .Notebook__content__taskbox
-      %p.Notebook__content__taskbox--text Task Box
-      .Notebook__content__taskbox--field
-        .taskbox_field
-          = @diary.taskbox1
-        .taskbox_field
-          = @diary.taskbox2
-        .taskbox_field
-          = @diary.taskbox3
-        .taskbox_field
-          = @diary.taskbox4
-        .taskbox_field
-          = @diary.taskbox5
-        .taskbox_field
-          = @diary.taskbox6
-        .taskbox_field
-          = @diary.taskbox7
-        .taskbox_field
-          = @diary.taskbox8
-        .taskbox_field
-          = @diary.taskbox9
-        .taskbox_field
-          = @diary.taskbox10
-    .Notebook__content__diary
-      %p.Notebook__content__diary--text Diary
-      .Notebook__content__diary--field
-        .diary-date
-          = simple_format(@diary.diary) 
-    .Notebook__content__date
-      .date
-      = @diary.date
-      .Notebook__content__date__submit
-        = link_to '編　集', edit_diary_path,method: :get,class:"edit-btn"
-        %span or
-        = link_to '削　除', diary_path(@diary.id),method: :delete ,class:"dalete-btn"
-        %span or
-        = link_to 'もどる', "/",class:"dalete-btn"
+    .Notebook__content__main
+      .Notebook__content__main__taskbox
+        %p.Notebook__content__main__taskbox--text Task Box
+        .Notebook__content__main__taskbox--field
+          .taskbox_field
+            = @diary.taskbox1
+          .taskbox_field
+            = @diary.taskbox2
+          .taskbox_field
+            = @diary.taskbox3
+          .taskbox_field
+            = @diary.taskbox4
+          .taskbox_field
+            = @diary.taskbox5
+          .taskbox_field
+            = @diary.taskbox6
+          .taskbox_field
+            = @diary.taskbox7
+          .taskbox_field
+            = @diary.taskbox8
+          .taskbox_field
+            = @diary.taskbox9
+          .taskbox_field
+            = @diary.taskbox10
+      .Notebook__content__main__diary
+        %p.Notebook__content__main__diary--text Plan
+        .Notebook__content__main__diary--fields
+          .diary-dates
+            = simple_format(@diary.plan) 
+        %p.Notebook__content__main__diary--text Looking back
+        .Notebook__content__main__diary--fields
+          .diary-dates
+            = simple_format(@diary.lookingback) 
+        %p.Notebook__content__main__diary--text Diary
+        .Notebook__content__main__diary--fields
+          .diary-dates
+            = simple_format(@diary.diary) 
+        .Notebook__content__main__date
+          .date
+          = @diary.date
+          .Notebook__content__main__date__submit
+            = link_to '編　集', edit_diary_path,method: :get,class:"edit-btn"
+            %span or
+            = link_to '削　除', diary_path(@diary.id),method: :delete ,class:"dalete-btn"
+            %span or
+            = link_to 'もどる', "/",class:"dalete-btn"

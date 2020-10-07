@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 .Notebook{
-  background-color: #f8f8f8;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
   display: flex;
@@ -10,7 +9,6 @@
   flex-direction: column;
   padding: 10px;
   &__content{
-    background-color: white;
     width: 90vw;
     height: 90vh;
     margin: 15vh 5vw 5vh 5vw;
@@ -23,90 +21,120 @@
       border-color: #FF0000;
       border-width: 3px;
     }
-    &__priority{
-      float: left;
-      border-right:1px solid #FF0000;
-      width: 20vw;
-      text-align: center;
-      padding: 20px 0;
-      display: inline;
-      &--text{
-        font-size: 30px;
-        font-family: 'Amatic SC', cursive;
-      }
-      &--number{
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .number_field{
-        margin: 14px;
-        display: block;
-      }
-    }
-    &__taskbox{
-      float: left;
-      width: 30vw;
-      text-align: center;
-      padding: 20px 0;
-      &--text{
-        font-family: 'Amatic SC', cursive;
-        font-size: 30px;
-        text-align: center;
-      }
-      &--field{
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .text_field{
-        margin: 14px;
-        display: block;
-      }
-    }
-    &__diary{
-      text-align: center;
-      padding: 20px 0;
-      float: left;
-      width: 40vw;
-      &--text{
-        font-family: 'Amatic SC', cursive;
-        font-size: 30px;
-        text-align: center;
-      }
-    }
-    .diary-text{
-      margin: 14px;
-      padding: 5px 20px;
-    }
-    &__date{
+    &__main{
       display: flex;
-      position: absolute;
-      bottom: 30px;
-      right: 20px;
-      &__submit{
-        padding-left: 20px;
+      &__taskbox{
+        width: 30vw;
+        text-align: center;
+        padding: 20px 0;
+        &--text{
+          font-family: 'Amatic SC', cursive;
+          font-size: 30px;
+          text-align: center;
+        }
+        &--field{
+          flex-direction: column;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+        .text_field{
+          margin: 14px;
+          display: block;
+        }
       }
-    }
-    .date{
-      display: flex;
-    }
-    .submit{
-      width: 100px;
-      background-color:#9966FF;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: large;
+      &__diary{
+        text-align: left;
+        width: 40vw;
+        &--field{
+          padding-left: 20px;
+        }
+        &--text{
+          font-family: 'Amatic SC', cursive;
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+      .diary-text{
+        margin: 14px;
+        padding: 5px 20px;
+      }
+      &__date{
+        display: flex;
+        position: absolute;
+        right: 100px;
+        &__submit{
+          padding-left: 20px;
+        }
+      }
+      .data{
+        display: flex;
+      }
+      .submit{
+        width: 100px;
+        background-color:#9966FF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: large;
+      }
     }
   }
 }
 
 @media(max-width: 670px){
-  .number_field{
-    width: 2px;
-    background-color: red;
+  .Notebook{
+    background-color: white;
+    &__content{
+      &__text{
+        font-size: 50px;
+      }
+      &__main{
+        flex-direction: column;
+        &__taskbox{
+          width: 100%;
+          height: 100vh;
+          &--text{
+            font-family: 'Amatic SC', cursive;
+            font-size: 30px;
+            text-align: center;
+          }
+        }
+        &__diary{
+          text-align: center;
+          width: 100vw;
+          position: relative;
+          margin-bottom: 50px;
+          &--text{
+            font-family: 'Amatic SC', cursive;
+            font-size: 30px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .text_field{
+    width: 40vw;
+    height: 5vh;
+    padding: 0;
+  }
+  .diary-text{
+    width: 50vw;
+  }
+  .taskbox_field{
+    height: 40px;
+  }
+  .date{
+    height: 100px;
+  }
+  .Notebook__content__main__diary--fields{
+    .diary-dates{
+      padding: 5px 30px;
+    }
+  }
+  .Notebook__content__main__date{
+    margin-top: 80px;
   }
 }

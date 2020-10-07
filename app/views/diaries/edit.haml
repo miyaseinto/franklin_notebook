@@ -4,25 +4,32 @@
     %p.Notebook__content__text Daily Planner
     = form_with(model: @diary, local: true ) do |f|
       = render 'layouts/error_messages',model: f.object
-      .Notebook__content__taskbox
-        %p.Notebook__content__taskbox--text Task Box
-        .Notebook__content__taskbox--field
-          =f.text_field :taskbox1,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox2,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox3,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox4,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox5,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox6,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox7,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox8,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox9,class:"text_field", placeholder:"計画立案"
-          =f.text_field :taskbox10,class:"text_field", placeholder:"計画立案"
-      .Notebook__content__diary
-        %p.Notebook__content__diary--text Diary
-        .Notebook__content__diary--field
-          = f.text_area :diary, class:"diary-text", placeholder:"計画立案の結果を記入", size: "60x20"
-      .Notebook__content__date
-        .field
-        =f.date_field :date,class:"data"
-        .Notebook__content__date__submit
-          = f.submit "変　更", class:"submit"
+      .Notebook__content__main
+        .Notebook__content__main__taskbox
+          %p.Notebook__content__main__taskbox--text Task Box
+          .Notebook__content__main__taskbox--field
+            =f.text_field :taskbox1,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox2,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox3,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox4,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox5,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox6,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox7,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox8,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox9,class:"text_field", placeholder:"計画立案"
+            =f.text_field :taskbox10,class:"text_field", placeholder:"計画立案"
+        .Notebook__content__main__diary
+          %p.Notebook__content__main__diary--text Plan
+          .Notebook__content__main__diary--field
+            = f.text_area :plan, class:"diary-text", placeholder:"例）10時〜12時まで〇〇をする。", size: "80x5"
+          %p.Notebook__content__main__diary--text Looking back
+          .Notebook__content__main__diary--field
+            = f.text_area :lookingback, class:"diary-text", placeholder:"例）10時〜12時まで〇〇を行った。", size: "80x5"
+          %p.Notebook__content__main__diary--text Diary
+          .Notebook__content__main__diary--field
+            = f.text_area :diary, class:"diary-text", placeholder:"例）今日は〇〇をメインに行い、〇〇ができた。", size: "80x5"
+          .Notebook__content__main__date
+            .field
+            =f.date_field :date,class:"data"
+            .Notebook__content__main__date__submit
+              = f.submit "変　更", class:"submit"

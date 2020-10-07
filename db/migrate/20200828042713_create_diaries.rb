@@ -12,6 +12,8 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.string :taskbox9,        null: false
       t.string :taskbox10,       null: false
       t.text :diary,             null: false
+      t.text :plan,              null: false
+      t.text :lookingback,       null: false
       t.date :date,              null: false
       t.references :user,        foreign_key:true
       t.timestamps

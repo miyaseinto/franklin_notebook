@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2020_08_28_042811) do
     t.string "taskbox9", null: false
     t.string "taskbox10", null: false
     t.text "diary", null: false
+    t.text "plan", null: false
+    t.text "lookingback", null: false
     t.date "date", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
